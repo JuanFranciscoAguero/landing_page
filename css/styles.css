@@ -1,0 +1,213 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-image: url(../img/pexels-lovefood-art-1437590.jpg);
+    background-size: cover;
+    font-size: 30px;
+    font-family: 'Kanit', sans-serif;
+    color: aliceblue;
+}
+
+
+/*Header*/
+
+.container {
+    width: 100%;
+    margin: auto;
+}
+
+.site-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.site-branding {
+    background: rgb(26, 24, 24);
+    padding: 30px;
+    margin: 40px;
+    border: 30px;
+    border-radius: 10px;
+}
+
+.site-title {
+    text-align: center;
+    font-weight: 900;
+}
+
+.site-description {
+    text-align: center;
+    font-size: 17px;
+    font-weight: 100;
+    padding: 2px;
+    border: 4px;
+    margin: 2px;
+}
+
+
+/*Navigation Bar*/
+
+.fa-bars {
+    position: absolute;
+    cursor: pointer;
+    top: 710px;
+    left: 40px;
+    z-index: 2;
+    display: none;
+}
+
+.fa-bars:hover {
+    color: hsl(19, 73%, 50%);
+}
+
+.nav-bar {
+    font-size: 17px;
+    font-weight: 100;
+    background: rgb(26, 24, 24);
+    display: flex;
+    justify-content: space-between;
+    height: 50px;
+    width: 100%;
+    padding: 20px 0;
+    z-index: 3;
+}
+
+.nav-bar .menu-nav {
+    display: flex;
+}
+
+.menu-nav {
+    list-style: none;
+    padding-left: 60px;
+}
+
+.nav-bar .menu-nav li a {
+    padding: 1.25rem 1.7rem;
+    padding-bottom: 2px;
+    text-transform: uppercase;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+a:hover {
+    transition: all 250ms;
+    color: hsl(19, 73%, 50%);
+}
+
+.fa-search {
+    position: absolute;
+    cursor: pointer;
+    top: 710px;
+    right: 15px;
+    z-index: 2;
+    display: none;
+}
+
+.fa-search:hover {
+    color: hsl(19, 73%, 50%);
+}
+
+
+/*About*/
+
+.about-container {
+    background-color: hsl(19, 73%, 50%);
+    color: rgb(26, 24, 24);
+}
+
+.about {
+    padding: 75px;
+}
+
+.about-title {
+    padding: 10px;
+    font-size: 40px;
+}
+
+.about-description {
+    font-size: 17px;
+    padding: 15px auto 10px;
+}
+
+h6 {
+    font-size: 20px;
+    padding: 10px;
+}
+
+
+/*Footer*/
+
+.footer {
+    background: rgb(26, 24, 24);
+    color: #fff;
+    clear: both;
+    padding: 5.8em 0 0;
+    width: 100%;
+}
+
+.pages {
+    padding-left: 60px;
+    padding-bottom: 10px;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+.footer-links {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-left: 35px;
+    font-size: 13px;
+}
+
+.footer-links li {
+    padding: 1.25rem 1.7rem;
+    padding-bottom: 2px;
+    text-transform: uppercase;
+}
+
+.footer-links a {
+    color: hsl(19, 73%, 50%);
+}
+
+.footer-links a:hover {
+    color: #fff;
+}
+
+
+/*Media Queries*/
+
+@media (max-width: 700px) {
+    .fa-bars {
+        display: block;
+    }
+    .nav-bar ul.menu-nav {
+        display: block;
+        position: absolute;
+        top: 710px;
+        left: 0;
+        background: #2f3640;
+        background-origin: padding-box;
+        width: 50%;
+        height: 50%;
+        opacity: 0.9;
+        transform: translateX(-500px);
+        transition: transform .5s ease-in-out;
+    }
+    .nav-bar ul.menu-nav.show {
+        transform: translateX(-10px);
+    }
+    .nav-bar ul.menu-nav li {
+        padding: 20px;
+        font-size: 15px;
+    }
+}
